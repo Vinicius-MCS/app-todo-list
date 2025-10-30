@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+
+@font-face {
+    src: url("/fonts/JosefinSans-Regular.ttf") format("ttf");
+    font-family: "Josefin Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    src: url("/fonts/JosefinSans-Bold.ttf") format("ttf");
+    font-family: Josefin Sans;
+    font-style: bold;
+    font-weight: 700;
+    font-display: swap;
+}
+
+@theme {
+  /* Cores principais */
+  --color-bright-blue: hsl(220, 98%, 61%);
+  --color-check-background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+
+  /* Neutras */
+  --color-grayish-50: hsl(0, 0%, 98%);
+  --color-grayish-300: hsl(233, 11%, 84%);
+  --color-grayish-600: hsl(236, 9%, 61%);
+
+  /* Light Theme */
+  --color-purple-300: hsl(234, 39%, 85%);
+  --color-navy-850: hsl(235, 19%, 35%);
+
+  /* Dark Theme */
+  --color-navy-950: hsl(235, 21%, 11%);
+  --color-navy-900: hsl(235, 24%, 19%);
+  --color-purple-100: hsl(236, 33%, 92%); /* hover */
+  --color-purple-600: hsl(235, 16%, 43%);
+  --color-purple-700: hsl(233, 14%, 35%);
+  --color-purple-800: hsl(237, 14%, 26%);
+
+  --font-primary: "Josefin Sans", sans-serif;
+}
+
+body {
+    font-family: var(--font-primary);
+}
+
+@layer base {
+    .theme-light {
+        @apply bg-[url('/images/bg-desktop-light.jpg')] bg-cover bg-no-repeat bg-center h-80
+    }
+
+    .theme-dark {
+        @apply bg-[url('/images/bg-desktop-dark.jpg')] bg-cover bg-no-repeat bg-center h-80
+    }
+}
