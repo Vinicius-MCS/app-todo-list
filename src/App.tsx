@@ -6,7 +6,7 @@ import { useTodo } from './hooks/useTodo'
 
 function App() {
 
-  const { addTodo, toggleTodoCompleted, clearCompleted, filteredTodos, filter, setFilter, removeTodo } = useTodo()
+  const { addTodo, toggleTodoCompleted, clearCompleted, filteredTodos, filter, setFilter, removeTodo} = useTodo()
 
   return (
     <TodoContainer>
@@ -15,6 +15,7 @@ function App() {
       <TodoForm addTodo={addTodo}></TodoForm>
 
       <TodoList todoList={filteredTodos} toggleTodoCompleted={toggleTodoCompleted} setFilter={setFilter} filter={filter} clearCompleted={clearCompleted} removeTodo={removeTodo}></TodoList>
+
     </TodoContainer>
   )
 }

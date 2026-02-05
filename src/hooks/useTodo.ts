@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from "react"
+import { useEffect, useState, type FormEvent } from "react"
 
 export interface Todo {
   id: number,
@@ -6,10 +6,32 @@ export interface Todo {
   completed: boolean
 }
 
+async function getTodos(): Promise<Todo[]> {
+    await new Promise(resolve => setTimeout(resolve, 800))
+
+    return [
+        {id: 1, text: "Aprender useEffect", completed: false},
+        {id: 2, text: "Aprender React", completed: false},
+        {id: 3, text: "Aprender JS", completed: true},
+    ]
+} 
+
 export const useTodo = () => {
 
     const [todoList, setTodoList] = useState<Todo[]>([])
     const [filter, setFilter] = useState<"all" | "active" | "completed">("all")
+    const [refresh, setRefresh] = useState(false)
+
+    useEffect(() => {
+        const fetchTodods = async() => {
+            const todos = await getTodos();
+
+            console.log("Dados recebidos", todos);
+            setTodoList(todos);
+        }
+
+        fetchTodods()
+    }, [refresh])
 
     const addTodo = (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault()
@@ -70,6 +92,8 @@ export const useTodo = () => {
         clearCompleted,
         filter,
         setFilter,
-        removeTodo
+        removeTodo,
+        refresh,
+        setRefresh
     }
 }

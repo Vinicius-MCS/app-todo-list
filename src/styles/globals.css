@@ -2,7 +2,7 @@
 
 
 @font-face {
-    src: url("/fonts/JosefinSans-Regular.ttf") format("ttf");
+    src: url("/src/src/fonts/JosefinSans-Regular.ttf") format("ttf");
     font-family: "Josefin Sans";
     font-style: normal;
     font-weight: 400;
@@ -10,7 +10,7 @@
 }
 
 @font-face {
-    src: url("/fonts/JosefinSans-Bold.ttf") format("ttf");
+    src: url("/src/assets/fonts/JosefinSans-Bold.ttf") format("ttf");
     font-family: Josefin Sans;
     font-style: bold;
     font-weight: 700;
@@ -48,10 +48,10 @@ body {
 
 @layer base {
     .theme-light {
-        @apply bg-[url('/images/bg-desktop-light.jpg')] bg-cover bg-no-repeat bg-center h-80
+        @apply bg-[url('/src/assets/images/bg-desktop-light.jpg')] bg-cover bg-no-repeat bg-center h-80
     }
 
     .theme-dark {
-        @apply bg-[url('/images/bg-desktop-dark.jpg')] bg-cover bg-no-repeat bg-center h-80
+        @apply bg-[url('/src/assets/images/bg-desktop-dark.jpg')] bg-cover bg-no-repeat bg-center h-80
     }
 }

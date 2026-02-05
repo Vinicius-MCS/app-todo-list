@@ -1,69 +1,88 @@
-# React + TypeScript + Vite
+# 📝 To-Do List App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Um aplicativo web de lista de tarefas (to-do list) desenvolvido com **React.js**, oferecendo uma interface intuitiva e responsiva para gerenciamento de atividades diárias.
 
-Currently, two official plugins are available:
+## ✨ Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ✅ **Adicionar novas tarefas** com título e descrição
+- ✅ **Marcar tarefas como concluídas** (check visual)
+- ✅ **Excluir tarefas** individualmente
+- ✅ **Responsividade** para diferentes dispositivos
+- ✅ **Interface limpa e moderna** com feedback visual
 
-## Expanding the ESLint configuration
+## 🛠️ Tecnologias Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React.js** - Biblioteca JavaScript para construção da interface
+- **JavaScript (ES6+)** - Lógica de programação
+- **HTML5** - Estrutura da aplicação
+- **CSS3** - Estilização e design responsivo
+- **Local Storage** (planejado para implementação futura)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🚀 Como Executar o Projeto
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Pré-requisitos
+- Node.js instalado
+- npm ou yarn
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Passos para instalação
+```bash
+# Clone o repositório
+git clone https://github.com/Vinicius-MCS/app-todo-list.git
+
+# Acesse a pasta do projeto
+cd app-todo-list
+
+# Instale as dependências
+npm install
+
+# Execute a aplicação
+npm start
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+A aplicação estará disponível em: `http://localhost:3000`
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📁 Estrutura do Projeto
 ```
+app-todo-list/
+├── public/
+│   └── index.html
+├── src/
+│   ├── components/
+│   │   ├── TodoList.js
+│   │   ├── TodoItem.js
+│   │   └── AddTodo.js
+│   ├── App.js
+│   ├── App.css
+│   └── index.js
+└── README.md
+```
+
+## 🎯 Habilidades Demonstradas
+
+Este projeto demonstra minhas competências em:
+- **Desenvolvimento Frontend** com React.js
+- **Componentização** e reutilização de código
+- **Manipulação de estado** em aplicações React
+- **UI/UX Design** com foco em usabilidade
+- **Git e Versionamento** de código
+- **Resolução de problemas** com soluções elegantes
+
+## 🔮 Próximas Melhorias (Roadmap)
+
+- [ ] Persistência de dados com Local Storage
+- [ ] Filtros por status (concluídas/pendentes)
+- [ ] Edição de tarefas existentes
+- [ ] Categorização de tarefas por tags
+- [ ] Modo escuro/claro
+- [ ] Animações e transições suaves
+
+## 📸 Capturas de Tela
+
+![APP com tema escuro em tela desktop](/public/printscreen/printscreen-todo-list-dark.png)
+
+![APP com tema claro em tela mobile](/public/printscreen/printscreen-todo-list-light-mobile.png)
+
+**Desenvolvido por:** [Vinicius-MCS](https://github.com/Vinicius-MCS)  
+**Contato:** vinicius.mcs07@gmail.com 
+
+*Projeto desenvolvido como parte do portfólio para candidatura à bolsa de desenvolvimento web frontend na UFPA.*

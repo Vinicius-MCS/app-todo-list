@@ -2,7 +2,7 @@ import { ThemeContext } from "../../contexts/ThemeContext"
 import { useContext } from "react"
 import { themeConfig } from "../../contexts/theme"
 import type { Todo } from "../../hooks/useTodo"
-import IconCheck from "/images/icon-check.svg"
+import IconCheck from "../../assets/images/icon-check.svg"
 
 interface TodoListProps {
     todoList: Todo[],
@@ -16,10 +16,6 @@ interface TodoListProps {
 const TodoList = ({ todoList, toggleTodoCompleted, setFilter, filter, clearCompleted, removeTodo }: TodoListProps) => {
 
     const { theme } = useContext(ThemeContext)
-
-    // function deleteTodo(): void {
-    //     throw new Error("Function not implemented.")
-    // }
 
     return (
         <>
