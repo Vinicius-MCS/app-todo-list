@@ -2,7 +2,7 @@
 
 Um aplicativo web de lista de tarefas (to-do list) desenvolvido com **React.js**, oferecendo uma interface intuitiva e responsiva para gerenciamento de atividades diárias.
 
-##  Funcionalidades
+## ⚙️ Funcionalidades
 
 - ✅ **Adicionar novas tarefas** com título e descrição
 - ✅ **Marcar tarefas como concluídas** (check visual)
